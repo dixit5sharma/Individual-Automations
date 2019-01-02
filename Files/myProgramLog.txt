@@ -1,0 +1,15 @@
+ 2018-12-22 13:04:13,948 - DEBUG - Start of program
+ 2018-12-22 13:04:13,948 - DEBUG - Start of factorial(5)
+ 2018-12-22 13:04:13,948 - DEBUG - i is 1, total is 1
+ 2018-12-22 13:04:13,948 - DEBUG - i is 2, total is 2
+ 2018-12-22 13:04:13,948 - DEBUG - i is 3, total is 6
+ 2018-12-22 13:04:13,948 - DEBUG - i is 4, total is 24
+ 2018-12-22 13:04:13,948 - DEBUG - i is 5, total is 120
+ 2018-12-22 13:04:13,948 - DEBUG - End of factorial(5)
+ 2018-12-22 13:04:13,948 - DEBUG - End of program
+ 2018-12-22 13:04:13,948 - DEBUG - --------------------------------
+ 2018-12-22 13:04:13,950 - DEBUG - Some debugging details.
+ 2018-12-22 13:04:13,950 - INFO - The logging module is working.
+ 2018-12-22 13:04:13,950 - WARNING - An error message is about to be logged.
+ 2018-12-22 13:04:13,950 - ERROR - An error has occurred.
+ 2018-12-22 13:04:13,950 - CRITICAL - The program is unable to recover!
