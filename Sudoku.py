@@ -49,7 +49,7 @@ if __name__== "__main__":
 
     a = Try_Possibility(a)
 
-    print("\n")
+    print()
     print("Solved Sudoku")
     for i in range(9):
         for j in range(9):
