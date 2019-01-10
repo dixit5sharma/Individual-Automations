@@ -1,13 +1,5 @@
-print("Input Sudoku - ")
-with open("SudokuFile.txt","r") as f:
-    a=[]
-    for line in f:
-        a.append(list(map(str,line.split())))
-        print(line,end="")
-
-counter=0
-loopContinue=True
-while(loopContinue):
+def find_posibilities(a):
+    d={}
     for i in range(9):
         for j in range(9):
             if a[i][j]=="*":
@@ -26,6 +18,7 @@ while(loopContinue):
                     s.discard(a[i+1][j+1])
                     s.discard(a[i+2][j+1])
                 if (i+1)%3==1 and (j+1)%3==0:
+                    #print(a[i+1][j-1] , a[i+2][j-1], a[i+1][j-2], a[i+2][j-2])
                     s.discard(a[i+1][j-1])
                     s.discard(a[i+2][j-1])
                     s.discard(a[i+1][j-2])
@@ -62,17 +55,23 @@ while(loopContinue):
                     s.discard(a[i-2][j-1])
                     s.discard(a[i-1][j-2])
                     s.discard(a[i-2][j-2])
+                #print(s)
                 if len(s)==1:
-                    a[i][j]=str(s.pop())
-                    loopContinue=False
+                    a[i][j]=int(s.pop())
+##                elif len(s)==2:
+##                    d["a["+str(i+1)+"]["+str(j+1)+"]"]=list(s)
+                    
+##    print(d)
+    return a
 
-    for i in range(9):
-        for j in range(9):
-            if a[i][j]=="*":
-                loopContinue=True
-    counter+=1
-print("\n")
-print("Solved Sudoku")
+
+with open("SudokuFile2.txt","r") as f:
+    a=[]
+    for line in f:
+        a.append(list(map(str,line.split())))
+
+find_posibilities(a)
+
 for i in range(9):
     for j in range(9):
         print(a[i][j],end=" ")
